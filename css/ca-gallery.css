@@ -206,7 +206,7 @@ header.masthead {
     background-repeat: no-repeat;
     background-attachment: scroll;
     background-position: center center;
-    clip-path: polygon(0 0, 100% 0, 100% 45vh, 0 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
