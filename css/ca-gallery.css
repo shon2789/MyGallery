@@ -272,6 +272,9 @@ header.masthead .intro-text .intro-heading {
         transform: translateY(-1px);
         box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
     }
+    .section-portfolio {
+        clip-path: polygon(0 20vh, 100% 0, 100% 100%, 0 100%)
+    }
 }
 
 @keyframes moveInLeft {
@@ -891,5 +894,11 @@ ul.social-buttons li a:active, ul.social-buttons li a:focus, ul.social-buttons l
 }
 
 .section-portfolio {
-    clip-path: polygon(0 20%, 100% 0, 100% 100%, 0 100%)
+    clip-path: polygon(0 7%, 100% 0, 100% 100%, 0 100%)
+}
+
+@media screen and (min-width:768px) {
+    .section-portfolio {
+        clip-path: polygon(0 20%, 100% 0, 100% 100%, 0 100%)
+    }
 }
