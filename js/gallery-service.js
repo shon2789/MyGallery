@@ -19,7 +19,7 @@ function createProjs() {
     gProjects.push(createProj('MineSweeper', 'Avoid The Mines',
         'Reveal the cells without stepping on a mine, be careful and patient, use the flags to mark safe cells',
         'https://shon2789.github.io/mine_Sweeper',
-        'img/portfolio/mineSweeper1.png', '22/07/2021', ['Test', 'Test2']));
+        'img/portfolio/minesweeper1.png', '22/07/2021', ['Test', 'Test2']));
 
     gProjects.push(createProj('Pacman', 'Avoid The Ghosts',
         'Your goal is to eat all the food on board, avoid the ghosts and make your best to survive!',
