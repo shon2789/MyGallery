@@ -3,6 +3,7 @@ console.log('Starting up');
 $(document).ready(onInit);
 
 function onInit() {
+    $('.email-submit').click(onClickSubmit)
     renderProjects();
     renderModal();
 }
@@ -52,7 +53,7 @@ function renderModal() {
                   
                   <h2>${proj.name}</h2>
     <p class="item-intro text-muted">${proj.title}</p>
-    <img class="img-fluid d-block mx-auto" src="${proj.image}" alt="">
+    <a href="${proj.url}"><img class="img-fluid d-block mx-auto" src="${proj.image}" alt=""></a>
     <p>${proj.desc}</p>
     <ul class="list-inline">
     <li>Link: <a href="${proj.url}">${proj.name}</a></li>
@@ -73,35 +74,18 @@ function renderModal() {
 
 }
 
-{/* <div class="col-md-4 col-sm-6 portfolio-item">
-          <a class="portfolio-link" data-toggle="modal" href="#portfolioModal1">
-            <div class="portfolio-hover">
-              <div class="portfolio-hover-content">
-                <i class="fa fa-plus fa-3x"></i>
-              </div>
-            </div>
-            <img class="img-fluid" src="img/portfolio/01-thumbnail.jpg" alt="">
-          </a>
-          <div class="portfolio-caption">
-            <h4>Threads</h4>
-            <p class="text-muted">Illustration</p>
-          </div>
-        </div> */}
+function onClickSubmit() {
+    var emailTxt = $('.email-input').val();
+    var subjectTxt = $('.subject-input').val();
+    var bodyTxt = $('.body-input').val();
+    var inputTxt = `https://mail.google.com/mail/?view=cm&fs=1&to=shon2789@gmail.com&su=${subjectTxt}&body=${bodyTxt}`
+    var regex = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/g;
+    if (!regex.test(emailTxt)) return;
+
+    if (!emailTxt || !subjectTxt || !bodyTxt) return;
+    $('.open-new-tab').attr('href', inputTxt)
 
 
-        // <h2>Project Name</h2>
-        //         <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
-        //         <img class="img-fluid d-block mx-auto" src="img/portfolio/01-full.jpg" alt="">
-        //         <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est
-        //           blanditiis
-        //           dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae
-        //           cupiditate,
-        //           maiores repudiandae, nostrum, reiciendis facere nemo!</p>
-        //         <ul class="list-inline">
-        //           <li>Date: January 2017</li>
-        //           <li>Client: Threads</li>
-        //           <li>Category: Illustration</li>
-        //         </ul>
-        //         <button class="btn btn-primary" data-dismiss="modal" type="button">
-        //           <i class="fa fa-times"></i>
-        //           Close Project</button>
+
+}
+
