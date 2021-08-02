@@ -869,6 +869,14 @@ ul.social-buttons li a:active, ul.social-buttons li a:focus, ul.social-buttons l
     color: #e44d26 !important;
 }
 
+.HTML5-color:hover {
+    transform: translateY(-5px);
+}
+
 .CSS3-color {
     color: #2a65f1 !important;
+}
+
+.CSS3-color:hover {
+    transform: translateY(-5px);
 }

@@ -1,6 +1,7 @@
 console.log('Starting up');
 
 $(document).ready(onInit);
+$('.contact-btn').click(openCanvas);
 
 function onInit() {
     $('.email-submit').click(onClickSubmit)
@@ -53,10 +54,10 @@ function renderModal() {
                   
                   <h2>${proj.name}</h2>
     <p class="item-intro text-muted">${proj.title}</p>
-    <a href="${proj.url}"><img class="img-fluid d-block mx-auto" src="${proj.image}" alt=""></a>
+    <a target="_blank" href="${proj.url}"><img class="img-fluid d-block mx-auto" src="${proj.image}" alt=""></a>
     <p>${proj.desc}</p>
     <ul class="list-inline">
-    <li>Link: <a href="${proj.url}">${proj.name}</a></li>
+    <li>Link: <a target="_blank" href="${proj.url}">${proj.name}</a></li>
       <li>Date: ${proj.publishedAt}</li>
       <li>Category: Games </li>
     </ul>
