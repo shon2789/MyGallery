@@ -911,3 +911,7 @@ ul.social-buttons li a:active, ul.social-buttons li a:focus, ul.social-buttons l
 .my-image {
     object-fit: cover;
 }
+
+.bg-light {
+    background: rgba(223, 224, 226, 0.5) !important;
+}
